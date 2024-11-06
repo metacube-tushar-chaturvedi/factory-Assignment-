@@ -72,8 +72,7 @@ public class Screen {
 		screen.addShape(rectangle);
 		screen.addShape(circleShape);
 		screen.addShape(squSahpe);
-		screen.addShape(triangleShape);
-        
+		screen.addShape(triangleShape);   
         screen.sortShape();
 
 	}
