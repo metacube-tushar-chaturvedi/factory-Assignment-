@@ -11,6 +11,14 @@ import shapes.Square;
 import shapes.Triangle;
 
 public class ShapeFactory {
+    /**
+     * Method for creating multiple Shape objects  
+     * 
+     * @param point taking input as object of Point class
+     * @param type taking input as Shape types
+     * @param sides taking input as List of Integer (side of shape)
+     * @return
+     */
     public static Shape createShape(Point point,ShapeType type,List<Integer> sides){
         Shape newShape = null ;
         if(type==ShapeType.RECTANGLE){

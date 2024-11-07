@@ -62,7 +62,6 @@ public class Rectangle implements Shape {
 
     @Override
     public boolean isEnClosed(Point point){
-        Point.checkPoint(point,pointList);
 
         return Point.checkPoint(point,pointList);
     }
