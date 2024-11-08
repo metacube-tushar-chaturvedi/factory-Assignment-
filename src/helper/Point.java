@@ -10,11 +10,12 @@ public class Point {
         this.xPoint = x;
         this.yPoint = y;
     }
-    
+    // setter x point 
     public void setX(double x){
         xPoint = x;
     }
-
+    
+    // setter y point 
     public void setY(double y){
         yPoint = y;
     }
@@ -23,14 +24,16 @@ public class Point {
     public double getX(){
         return xPoint;  
     }
-
-
     
     // getter of y point
     public double getY(){
         return yPoint;  
     }
-
+    /**
+     * @param targetPoint Finding in point in shape
+     * @param polygonPoint taking as conners of shape 
+     * @return returns true if point find inside shape 
+     */
     public static boolean checkPoint(Point targetPoint, List<Point> polygonPoints) {
         int crossings = 0;
         int numPoints = polygonPoints.size();

@@ -43,6 +43,8 @@ public class Triangle implements Shape {
     @Override
     public double getArea() {
         return (Math.sqrt(3)/4) * side * side;
+
+        // 100 * sqtRoot(3);
     }
 
     @Override

@@ -3,28 +3,27 @@ import java.util.List;
 
 import helper.Point;
 import helper.ShapeFactory;
-import shapes.Circle;
-import shapes.Rectangle;
 import shapes.Shape;
 import shapes.ShapeType;
-import shapes.Square;
-import shapes.Triangle;
 
 public class Screen {
 	private List<Shape> shapeList;
-
+    
 	public Screen() {
-		shapeList = new ArrayList();
+		shapeList = new ArrayList<Shape>();
 	}
-
+    
+	//add shape in screen
 	public void addShape(Shape shape) {
 		shapeList.add(shape);
 	}
-
+	
+	//remove shape in screen
 	public void removeShape(Shape shape) {
 		shapeList.remove(shape);
 	}
-
+    
+	// remove shape type from screnn
 	public void deleteAll(ShapeType shapeType) {
 		for (Shape shape : shapeList) {
 			if (shape.getShapeType() == shapeType) {
@@ -33,7 +32,8 @@ public class Screen {
 
 		}
 	}
-
+    
+	// Sorting Shape on basis of Area
 	public List<Shape> sortShape() {
 		List<Shape> sortedShapesList = shapeList;
 		for (int i = 0; i < shapeList.size() - 1; i++) {
@@ -49,7 +49,8 @@ public class Screen {
 		}
 		return sortedShapesList;
 	}
-
+   
+	// Display All shapes
 	public void display() {
 		for (Shape shape : shapeList) {
 			System.out.println(shape.getShapeType());
@@ -83,7 +84,7 @@ public class Screen {
 
 		// Triangle shape
 		sides.clear();
-		sides.add(10);
+		sides.add(20);
 		Shape triangleShape = ShapeFactory.createShape(point, ShapeType.TRIANGLE, sides);
 
 		// Circle shape
@@ -115,6 +116,8 @@ public class Screen {
 			System.out.println(shape.getShapeType());
 		}
         
+		Point targetPoint = new Point(8,14 );
+		System.out.println(rectangleShape.isEnClosed(targetPoint));
 	}
 
 }
